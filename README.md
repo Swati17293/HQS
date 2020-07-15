@@ -21,12 +21,19 @@
 
 ```
 image_id|question|answer
+...
+```
+## Train/load the model and generate the predictions
+
+```
+python3 main.py
 ```
 
-4. Train/load the model and generate the predictions
+## Evaluate and compare the models
 
-    python3 main.py
-
-5. Evaluate and compare the models
-
-    python3 evaluate.py
+```
+python3 evaluate.py
+```
+    
+## License
+> MIT License
