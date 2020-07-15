@@ -6,12 +6,12 @@
 
 ## Requirements
 
-> - pandas
-  - scikit-learn
-  - matplotlib
-  - pillow
-  - nltk
-  - keras
+  * pandas
+  * scikit-learn
+  * matplotlib
+  * pillow
+  * nltk
+  * keras
 
 ## Dataset.
     
@@ -19,7 +19,7 @@
 
 ## Input data format
 
-`image_id|question|answer`
+> `image_id|question|answer`
 
 4. Train/load the model and generate the predictions
 
