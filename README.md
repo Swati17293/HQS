@@ -25,6 +25,8 @@ image_id|question|answer
 ```
 ## Train/load the model and generate the predictions
 
+> Download glove.6B.300d.txt file and place it in the data/external/glove folder.
+
 ```
 python3 main.py
 ```
