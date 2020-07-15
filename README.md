@@ -1,19 +1,25 @@
-"Hierarchical Deep Multi-modal Network for MedicalVisual Question Answering"
+# Hierarchical Deep Multi-modal Network for MedicalVisual Question Answering
 
-1. Create the conda environment from the environment.yml file to install the dependencies.
+## Introduction
+
+> Visual Question Answering in Medical domain (VQA-Med) plays an important role in providing medical assistance to the end-users. These users are expected to raise either a straightforward question with a Yes/No answer or a challenging question that requires a detailed and descriptive answer. The existing techniques in VQA-Med fail to distinguish between the different question types sometimes complicates the simpler problems, or over-simplifies the complicated ones. It is certainly true that for different question types, several distinct systems can lead to confusion and discomfort for the end-users. To address this issue, we propose a hierarchical deep multi-modal network that analyzes and classifies end-user questions/queries and then incorporates a query-specific approach for answer prediction. We refer our proposed approach as Hierarchical Question Segregation based Visual Question Answering, in short HQS-VQA. 
+
+## Requirements
+
+> - pandas
+  - scikit-learn
+  - matplotlib
+  - pillow
+  - nltk
+  - keras
+
+## Dataset.
     
-    conda env create --name yourenvname --file=environment.yml
+> Dataset is taken from the paper available at https://www.nature.com/articles/sdata2018251
 
-2. Activate the environment.
+## Input data format
 
-    conda activate yourenvname
-
-3. Download and Prepare the dataset.
-    
-    -- download the dataset from the paper available at https://www.nature.com/articles/sdata2018251
-    prepare the dataset by selecting the required fields and splitting it in train and test set
-
-    for reference see the sample set in data/raw/ folder
+`image_id|question|answer`
 
 4. Train/load the model and generate the predictions
 
@@ -22,17 +28,3 @@
 5. Evaluate and compare the models
 
     python3 evaluate.py
-	
-# My new project
-
-## Introduction
-
-> An introduction or lead on what problem you're solving. Answer the question, "Why does someone need this?"
-
-## Code Samples
-
-> You've gotten their attention in the introduction, now show a few code examples. So they get a visualization and as a bonus, make them copy/paste friendly.
-
-## Installation
-
-> The installation instructions are low priority in the readme and should come at the bottom. The first part answers all their objections and now that they want to use it, show them how.
