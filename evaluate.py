@@ -309,7 +309,7 @@ class VqaMedEvaluator:
                     bleu_score = 1
                 # Calculate the BLEU score
                 else:
-                    bleu_score = bleu_score = nltk.translate.bleu_score.sentence_bleu([gt_words], smoothing_function=SmoothingFunction().method0)
+                    bleu_score = bleu_score = nltk.translate.bleu_score.sentence_bleu([gt_words], candidate_words, smoothing_function=SmoothingFunction().method0)
             # Handle problematic cases where BLEU score calculation is impossible
             except ZeroDivisionError:
                 pass
