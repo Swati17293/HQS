@@ -20,7 +20,7 @@ class VqaMedEvaluator:
 
     #Used for Bleu in NLTK
     remove_stopwords = True
-    stemming = False
+    stemming = True
     case_sensitive = False
 
     """
@@ -260,7 +260,7 @@ class VqaMedEvaluator:
         # English Stopwords
         stops = set(stopwords.words("english"))
 
-        stops.remove('no')
+        #stops.remove('no')
 
         # Stemming
         stemmer = SnowballStemmer("english")
@@ -309,7 +309,7 @@ class VqaMedEvaluator:
                     bleu_score = 1
                 # Calculate the BLEU score
                 else:
-                    bleu_score = bleu_score = nltk.translate.bleu_score.sentence_bleu([gt_words], candidate_words, weights = [1])
+                    bleu_score = bleu_score = nltk.translate.bleu_score.sentence_bleu([gt_words], smoothing_function=SmoothingFunction().method0)
             # Handle problematic cases where BLEU score calculation is impossible
             except ZeroDivisionError:
                 pass
