@@ -1,41 +1,18 @@
-# Hierarchical Deep Multi-modal Network for MedicalVisual Question Answering
+## A Commonsense-Infused Language-Agnostic Learning Framework for Enhancing Prediction of Political Polarity in Multilingual News Headlines
 
-## Introduction
+## Abstract
 
-> Visual Question Answering in Medical domain (VQA-Med) plays an important role in providing medical assistance to the end-users. These users are expected to raise either a straightforward question with a Yes/No answer or a challenging question that requires a detailed and descriptive answer. The existing techniques in VQA-Med fail to distinguish between the different question types sometimes complicates the simpler problems, or over-simplifies the complicated ones. It is certainly true that for different question types, several distinct systems can lead to confusion and discomfort for the end-users. To address this issue, we propose a hierarchical deep multi-modal network that analyzes and classifies end-user questions/queries and then incorporates a query-specific approach for answer prediction. We refer our proposed approach as Hierarchical Question Segregation based Visual Question Answering, in short HQS-VQA. 
+> Predicting the political polarity of news headlines is a challenging task as they are inherently short, catchy, appealing, context-deficient, and contain only subtle bias clues. It becomes even more challenging in a multilingual setting involving low-resource languages. Our research hypothesis is that the use of additional knowledge, such as commonsense knowledge can compensate for a lack of adequate context. However, in a multilingual setting, it becomes ineffective as the majority of the underlying knowledge sources are available only in high-resource languages, such as English. To overcome this barrier, we propose to utilise the Inferential Commonsense Knowledge (IC_Knwl) via a Translate-Retrieve-Translate strategy to introduce a learning framework for the prediction of political polarity in multilingual news headlines. To evaluate the effectiveness of our framework, we present a dataset of multilingual news headlines.
 
-## Requirements
 
-  * pandas
-  * scikit-learn
-  * matplotlib
-  * pillow
-  * nltk
-  * keras
-
-## Dataset.
+## Dataset
     
-> Dataset is taken from the paper available at https://www.nature.com/articles/sdata2018251
+> The dataset and its generation scripts are stored in the data folder.
+Follow https://github.com/allenai/comet-atomic-2020/ to retrieve the Inferential Commonsense Knowledge (IC_Knwl)
+Use https://cloud.google.com/translate for translations
 
-## Input data format
-
-```
-image_id|question|answer
-...
-```
-## Train/load the model and generate the predictions
-
-> Download glove.6B.300d.txt file and place it in the data/external/glove folder.
+## To generate the predictions use one of the following files 
 
 ```
 python3 main.py
 ```
-
-## Evaluate and compare the models
-
-```
-python3 evaluate.py
-```
-    
-## License
-> MIT License
