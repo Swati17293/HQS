@@ -37,5 +37,24 @@ python3 main.py
 python3 evaluate.py
 ```
     
+## Reference
+
+If you are using this resource then please cite our paper:
+
+Gupta, Deepak, Swati Suman, and Asif Ekbal. "Hierarchical deep multi-modal network for medical visual question answering." Expert Systems with Applications 164 (2020): 113993.
+
+```
+@article{gupta2020hierarchical,
+  title={Hierarchical deep multi-modal network for medical visual question answering},
+  author={Gupta, Deepak and Suman, Swati and Ekbal, Asif},
+  journal={Expert Systems with Applications},
+  volume={164},
+  pages={113993},
+  year={2020},
+  publisher={Elsevier}
+}
+```
+
+    
 ## License
 > MIT License
